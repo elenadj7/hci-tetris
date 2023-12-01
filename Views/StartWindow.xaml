@@ -1,0 +1,53 @@
+﻿<Window x:Class="hci_tetris.Views.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hci_tetris.Views"
+        mc:Ignorable="d"
+        Title="Tetris" Height="600" Width="800" FontFamily="Courier New" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="../Assets/Logo.png">
+
+    <Border>
+        <Border.Background>
+            <ImageBrush ImageSource="../Assets/Background.png"/>
+        </Border.Background>
+        <Border Background="#CC321E1E" BorderThickness="3" Opacity="0.95">
+            <Grid>
+                <StackPanel Width="250" Orientation="Vertical" Margin="0,70,0,0">
+                    <Image Source="../Assets/Logo.png" Width="60" Height="80" />
+                    <TextBlock Text="Tetris" Foreground="#D5CEA3" FontSize="35" FontWeight="Medium" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+                    <TextBlock Text="Fit the pieces, clear the spaces-&#xA;Stress vanishes, piece by piece!" Foreground="#D5CEA3" FontSize="12" TextAlignment="Center" Margin="0,10,0,0"/>
+
+
+                    <TextBlock Text="Username" Foreground="#D5CEA3" FontSize="12" Margin="0,50,0,0"/>
+                    <TextBox x:Name="UsernameBox" FontSize="18" Foreground="#D5CEA3" Margin="0,5,0,0" HorizontalContentAlignment="Center"
+                             Background="Transparent" BorderBrush="#D5CEA3" BorderThickness="0,0,0,2" Height="35" VerticalContentAlignment="Center"/>
+
+                    <TextBlock x:Name="ErrorBlock" Foreground="Red" FontSize="11" Margin="0,10,0,0"/>
+
+                    <Button x:Name="LoginButton" Content="Start Game" Foreground="#D5CEA3" FontSize="18" Margin="0,40,0,0"
+                            Height="40" Click="StartButton_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#B3541E"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#7D3611"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Border>
+</Window>

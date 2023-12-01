@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>hci_tetris</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Images\**" />
+    <EmbeddedResource Remove="Images\**" />
+    <None Remove="Images\**" />
+    <Page Remove="Images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Background.png" />
+    <Resource Include="Assets\Empty-Figure.png" />
+    <Resource Include="Assets\I-Figure.png" />
+    <Resource Include="Assets\J-Figure.png" />
+    <Resource Include="Assets\L-Figure.png" />
+    <Resource Include="Assets\Logo.png" />
+    <Resource Include="Assets\Blue-piece.png" />
+    <Resource Include="Assets\Cyan-piece.png" />
+    <Resource Include="Assets\O-Figure.png" />
+    <Resource Include="Assets\S-Figure.png" />
+    <Resource Include="Assets\Seethrough-piece.png" />
+    <Resource Include="Assets\Green-piece.png" />
+    <Resource Include="Assets\Orange-piece.png" />
+    <Resource Include="Assets\Purple-piece.png" />
+    <Resource Include="Assets\Red-piece.png" />
+    <Resource Include="Assets\T-Figure.png" />
+    <Resource Include="Assets\Yellow-piece.png" />
+    <Resource Include="Assets\Z-Figure.png" />
+  </ItemGroup>
+
+</Project>
