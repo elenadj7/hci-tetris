@@ -14,8 +14,10 @@ This is a simple implementation of the classic Tetris in WPF for Windows.
 - **Right Arrow**: Move figure right 🚀
 - **Down Arrow**: Accelerate figure's descent ⬇️
 - **Up Arrow**: Rotate figure clockwise 🔄
+- **Space**: Drop figure to the bottom ⬇️⬇️
 - **C**: Rotate figure counterclockwise 🔄
 - **H**: Hold figure 🤲
+
 
 ## Screenshots
 ![1](https://github.com/elenadj7/hci-tetris/assets/92872835/8c3a309f-d87c-4836-85e0-de6e7da29796)
