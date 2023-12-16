@@ -13,19 +13,19 @@
         </Border.Background>
         <Border Background="#CC321E1E" BorderThickness="3" Opacity="0.95">
             <Grid>
-                <StackPanel Width="250" Orientation="Vertical" Margin="0,70,0,0">
-                    <Image Source="../Assets/Logo.png" Width="60" Height="80" />
-                    <TextBlock Text="Tetris" Foreground="#D5CEA3" FontSize="35" FontWeight="Medium" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+                <StackPanel Width="300" Orientation="Vertical" Margin="0,50,0,0">
+                    <Image Source="../Assets/Logo.png" Width="80" Height="100" />
+                    <TextBlock Text="Tetris" Foreground="#D5CEA3" FontSize="50" FontWeight="Medium" HorizontalAlignment="Center" Margin="0,5,0,0"/>
                     <TextBlock Text="Fit the pieces, clear the spaces-&#xA;Stress vanishes, piece by piece!" Foreground="#D5CEA3" FontSize="12" TextAlignment="Center" Margin="0,10,0,0"/>
 
 
-                    <TextBlock Text="Username" Foreground="#D5CEA3" FontSize="12" Margin="0,50,0,0"/>
+                    <TextBlock Text="Username" Foreground="#D5CEA3" FontSize="12" Margin="0,50,0,0" HorizontalAlignment="Center"/>
                     <TextBox x:Name="UsernameBox" FontSize="18" Foreground="#D5CEA3" Margin="0,5,0,0" HorizontalContentAlignment="Center"
                              Background="Transparent" BorderBrush="#D5CEA3" BorderThickness="0,0,0,2" Height="35" VerticalContentAlignment="Center"/>
 
-                    <TextBlock x:Name="ErrorBlock" Foreground="Red" FontSize="11" Margin="0,10,0,0"/>
+                    <TextBlock x:Name="ErrorBlock" Foreground="Red" FontSize="11" Margin="0,10,0,0" HorizontalAlignment="Center"/>
 
-                    <Button x:Name="LoginButton" Content="Start Game" Foreground="#D5CEA3" FontSize="18" Margin="0,40,0,0"
+                    <Button x:Name="LoginButton" Content="Start Game" Foreground="#D5CEA3" FontSize="20" Margin="0,40,0,0"
                             Height="40" Click="StartButton_Click">
                         <Button.Style>
                             <Style TargetType="Button">

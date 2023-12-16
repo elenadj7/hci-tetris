@@ -46,8 +46,7 @@
                         <TextBlock x:Name="FinalScoreText" Text="Score: " FontSize="36" TextAlignment="Center" Foreground="#D5CEA3"/>
 
                         <DataGrid x:Name="ResultsDataGrid" AutoGenerateColumns="False" Foreground="#D5CEA3" Background="#1F1212" BorderBrush="#D5CEA3" BorderThickness="1" Height="300" Margin="0,20"
-                                  CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" IsReadOnly="True" IsEnabled="True"
-                                  ScrollViewer.VerticalScrollBarVisibility="Auto">
+                                  IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Auto">
                             <DataGrid.Resources>
                                 <Style TargetType="ScrollBar">
                                     <Setter Property="Background" Value="#B3541E"/>
