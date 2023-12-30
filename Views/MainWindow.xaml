@@ -46,7 +46,7 @@
                         <TextBlock x:Name="FinalScoreText" Text="Score: " FontSize="36" TextAlignment="Center" Foreground="#D5CEA3"/>
 
                         <DataGrid x:Name="ResultsDataGrid" AutoGenerateColumns="False" Foreground="#D5CEA3" Background="#1F1212" BorderBrush="#D5CEA3" BorderThickness="1" Height="300" Margin="0,20"
-                                  IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                                  IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Auto" CanUserAddRows="False" SelectedIndex="-1" HeadersVisibility="Column" SelectionUnit="FullRow">
                             <DataGrid.Resources>
                                 <Style TargetType="ScrollBar">
                                     <Setter Property="Background" Value="#B3541E"/>
@@ -79,6 +79,16 @@
                                     <Setter Property="Foreground" Value="#D5CEA3"/>
                                 </Style>
                             </DataGrid.ColumnHeaderStyle>
+
+                            <DataGrid.RowStyle>
+                                <Style TargetType="DataGridRow">
+                                    <Setter Property="IsHitTestVisible" Value="True"/>
+                                    <Setter Property="Focusable" Value="True"/>
+                                    <Setter Property="IsEnabled" Value="True"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                </Style>
+                            </DataGrid.RowStyle>
                         </DataGrid>
                         
                         <Button Content="Play Again" Foreground="#D5CEA3" Margin="0,20,0,0" Padding="5" Click="PlayAgain_Click" Height="50">

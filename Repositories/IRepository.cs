@@ -13,5 +13,6 @@ namespace hci_tetris.Repositories
         void Add(string username, int score);
         void Update(string username, int score);
         List<User> GetAll();
+        User Get(string username);
     }
 }

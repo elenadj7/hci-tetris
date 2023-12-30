@@ -39,17 +39,10 @@ namespace hci_tetris.Views
             }
             else
             {
-                if(repository.CheckIfExists(username))
-                {
-                    ErrorBlock.Text = "* Username already exists";
-                }
-                else
-                {
-                    Thread.CurrentPrincipal = new GenericPrincipal(new GenericIdentity(username), null);
-                    MainWindow mainWindow = new();
-                    mainWindow.Show();
-                    this.Close();
-                }
+                Thread.CurrentPrincipal = new GenericPrincipal(new GenericIdentity(username), null);
+                MainWindow mainWindow = new();
+                mainWindow.Show();
+                this.Close();
             }
         }
     }

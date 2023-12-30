@@ -59,6 +59,11 @@ namespace hci_tetris.Repositories
             return exists;
         }
 
+        public User Get(string username)
+        {
+            return GetAll().Find(u => u.Username == username);
+        }
+
         public List<User> GetAll()
         {
             List<User> users = [];

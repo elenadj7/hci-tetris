@@ -11,7 +11,7 @@ namespace hci_tetris.Models
         private string username;
         private int score;
 
-        public String Username { get { return username; } set { username = value; } }
+        public string Username { get { return username; } set { username = value; } }
         public int Score { get { return score; } set { score = value; } }
 
         public User()

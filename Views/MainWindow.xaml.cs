@@ -23,6 +23,7 @@ namespace hci_tetris.Views
     public partial class MainWindow : Window
     {
         private readonly IRepository repository;
+        private int score;
         private List<User> Users { get; set; }
 
         private readonly ImageSource[] pieceImages =
@@ -59,7 +60,16 @@ namespace hci_tetris.Views
         public MainWindow()
         {
             repository = new JsonRepository();
-            repository.Add(Thread.CurrentPrincipal.Identity.Name, 0);
+            if (repository.CheckIfExists(Thread.CurrentPrincipal.Identity.Name))
+            {
+                score = repository.Get(Thread.CurrentPrincipal.Identity.Name).Score;
+            }
+            else
+            {
+                repository.Add(Thread.CurrentPrincipal.Identity.Name, 0);
+                score = 0;
+            }
+            
             InitializeComponent();
             imageControls = SetupGameCanvas(playPhase.Playfield);
         }
@@ -164,7 +174,12 @@ namespace hci_tetris.Views
 
             GameOverMenu.Visibility = Visibility.Visible;
             FinalScoreText.Text = $"Score: {playPhase.Score}";
-            repository.Update(Thread.CurrentPrincipal.Identity.Name, playPhase.Score);
+            if(playPhase.Score > score)
+            {
+                repository.Update(Thread.CurrentPrincipal.Identity.Name, playPhase.Score);
+                score = playPhase.Score;
+            }
+
             Users = repository.GetAll();
             Users.Sort((u1, u2) => u2.Score - u1.Score);
             ResultsDataGrid.ItemsSource = Users;
